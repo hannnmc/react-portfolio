@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
 #tsparticles {
     position: fixed;
     height: 100%;
