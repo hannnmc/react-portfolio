@@ -14,3 +14,11 @@
     z-index: -1;
 }
 
+.App {
+    color: white;
+}
+
+[ data-darkmode=false ] .App {
+    color: #222;
+}
+
