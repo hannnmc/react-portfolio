@@ -503,7 +503,7 @@
     "links": {
       "blink": false,
       "color": {
-        "value": "#000000"
+        "value": "#222"
       },
       "consent": false,
       "distance": 100,

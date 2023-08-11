@@ -12,7 +12,7 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({ isOn, setIsOn }) => {
   
   return (
     <div 
-    className='switch-container absolute top-6 left-6'
+    className='switch-container sticky top-6 ml-6'
     >
       <div 
         className={`theme-switch ${isOn ? "darkmode" : ""}`} 

@@ -8,7 +8,7 @@ import darkParticlesOptions from "./particles_dark.json";
 import { ISourceOptions } from "tsparticles-engine";
 import Navbar from "./Navbar";
 import profilePhoto from "../src/assets/images/profile_photo.jpg";
-import { motion, AnimatePresence } from 'framer-motion';
+import Projects from "./Projects";
 
 // Import the Switch component
 import Switch from "./SwitchTheme";
@@ -46,6 +46,7 @@ function App() {
                     Han Chen
                 </span>
             </div>
+            <Projects />
         </div>
         </div>
     );
