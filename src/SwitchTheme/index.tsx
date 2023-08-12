@@ -16,7 +16,7 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({ isOn, setIsOn }) => {
       className='switch-container absolute'
       >
         <div 
-          className={`theme-switch ${isOn ? "darkmode" : ""}`} 
+          className={`theme-switch`} 
           
           onClick={() => setIsOn(!isOn)}
           style={{ justifyContent: isOn ? 'flex-end' : 'flex-start' }}

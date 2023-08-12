@@ -2,8 +2,8 @@
     height: 40px;
     width: 72px;
     background-image: radial-gradient(circle farthest-corner at 10% 20%, 
-                      rgba(253, 203, 50, 1) 0%, 
-                      rgba(244, 56, 98, 1) 100.2%);
+                      rgb(243, 231, 194) 20%, 
+                      rgb(238, 188, 71) 100.2%);
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -25,17 +25,17 @@
   }
   
   .theme-icon {
-    color: #f88748;
+    color: #e8a62b;
   }
   
   [data-darkmode="true"] .theme-switch {
     background-image: linear-gradient(109.8deg,
-                      rgba(62, 5, 116, 1) -5.2%, 
-                      rgba(41, 14, 151, 1) -5.2%, 
-                      rgba(216, 68, 148, 1) 103.3%);
+                      rgb(10, 1, 18) -5.2%, 
+                      rgb(42, 5, 189) -5.2%, 
+                      rgb(68, 120, 216) 103.3%);
   }
   
   [data-darkmode="true"] .theme-icon {
-    color: #501a96;
+    color: rgb(42, 5, 189);
   }
   
