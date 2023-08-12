@@ -12,6 +12,7 @@ import Projects from "./Projects";
 
 // Import the Switch component
 import Switch from "./SwitchTheme";
+import Intro from "./Intro";
 
 function App() {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -29,7 +30,7 @@ function App() {
 
     return (
         <div  className="theme-wrapper" data-darkmode={isOn} >
-        <div className="App">
+        <div className="App flex flex-col text-Mont">
             {/* Add the theme toggle switch */}
             <Switch  
             isOn={isOn}
@@ -43,9 +44,12 @@ function App() {
             <div className="main-container flex flex-col items-center w-full">
                 <img className="w-52 rounded-full aspect-square mt-24" src={profilePhoto} alt="han" />
                 <span className="text-inherit text-4xl font-semibold font-Mont mt-8">
-                    Han Chen
+                    Hi, I'm Han!
                 </span>
             </div>
+
+            <Intro />
+
             <Projects />
         </div>
         </div>
