@@ -1,5 +1,6 @@
 .cp-transition__container {
     height: 100%;
+    min-height: 686px;
     width: 100%;
     position: relative;
     display: flex;
@@ -13,33 +14,13 @@
     }
   }
   
-  .cp-transition__container > div {
-    height: auto;
-  }
-/*   
-  .cp-transition__container--one {
-    background-image: radial-gradient(circle 929px at 0.6% 1.3%, rgba(248, 251, 10, 0.4) 0%, rgba(248, 47, 47, 0.4) 82.6%);
-  }
-  
-  .cp-transition__container--two {
-    background-image: linear-gradient(110.1deg, rgba(34, 126, 34, 0.4) 2.9%, rgba(168, 251, 60, 0.4) 90.3%);
-  } */
-  
-  /* .cp-transition__container--three {
-    background-image: linear-gradient(109.7deg, rgba(229, 0, 57, 0.4) 1.8%, rgba(162, 91, 182, 0.4) 90.2%);
-  } */
-  
-  /* .cp-transition__container--four {
-    background-image: radial-gradient(circle 654px at 0.6% 48%, rgba(12, 170, 255, 0.4) 0%, rgba(151, 255, 129, 0.4) 86.3%);
-  } */
-  
   .square {
     position: relative;
-    height: auto;
+    height: 100%;
     width: 33%;
     max-width: 415px;
     /* max-height: 690px; */
-    margin: 20px;
+    margin: 26px;
     border-radius: 15px;
     box-shadow: var(--shadow-md);
     transition: all 0.2s;
@@ -67,10 +48,6 @@
   [data-darkmode=false] .square--three {
     background-color: #F1F0E8;
   }
-
-  /* .square--blue {
-    background-color: #19A0FA;
-  } */
   
   .square:hover {
     transform: translateY(-3px) !important;
@@ -90,41 +67,31 @@
   }
   
   .card__wrapper {
-    position: relative;
+    /* position: relative;
     top: 0;
     left: 0;
-    width: 1170px;
+    
     height: 100%;
-    padding: 30px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr;
-    gap: 20px;
+    gap: 20px; */
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    background: linear-gradient(to right, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
   }
 
 .card__wrapper--one {
-  background: linear-gradient(to right, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+
 }
-
-
 .card__wrapper--two {
-  background: linear-gradient(to right, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+
+}
+.card__wrapper--three {
+
 }
 
-.card__wrapper--three {
-  background: linear-gradient(to right, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
-}
-  
-  
-  /* .card__wrapper--blue {
-    background-image: radial-gradient(circle 654px at 0.6% 48%, rgba(12, 170, 255, 1) 0%, rgba(151, 255, 129, 1) 86.3%);
-  } */
-  
-  .card__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   
   .card__header h2 {
     font-size: 3.2rem;
@@ -142,19 +109,18 @@
     outline: none;
   }
   
-  .card__content {
+  /* .card__content {
     display: grid;
     gap: 30px;
     grid-template-columns: min-content 1fr;
     align-content: center;
     shape-outside: circle();
-  }
-  
-  .card__img-placeholder {
-    height: 175px;
-    width: 175px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
+  } */
+
+  .project-card-img {
+    aspect-ratio: 1.3968;
+    width: 650px;
+    object-fit: cover;
   }
   
   @media (max-width: 768px) {
@@ -164,9 +130,39 @@
     }
   }
   
-  .card__text-placeholder {
+  /* .card__text-placeholder {
     text-align: justify;
     line-height: 125%;
     font-size: 1.6rem;
+  } */
+
+
+    /* .square--blue {
+    background-color: #19A0FA;
+  } */
+
+    
+  /* .card__wrapper--blue {
+    background-image: radial-gradient(circle 654px at 0.6% 48%, rgba(12, 170, 255, 1) 0%, rgba(151, 255, 129, 1) 86.3%);
+  } */
+
+
+    /* .cp-transition__container > div {
+    height: auto;
+  } */
+/*   
+  .cp-transition__container--one {
+    background-image: radial-gradient(circle 929px at 0.6% 1.3%, rgba(248, 251, 10, 0.4) 0%, rgba(248, 47, 47, 0.4) 82.6%);
   }
   
+  .cp-transition__container--two {
+    background-image: linear-gradient(110.1deg, rgba(34, 126, 34, 0.4) 2.9%, rgba(168, 251, 60, 0.4) 90.3%);
+  } */
+  
+  /* .cp-transition__container--three {
+    background-image: linear-gradient(109.7deg, rgba(229, 0, 57, 0.4) 1.8%, rgba(162, 91, 182, 0.4) 90.2%);
+  } */
+  
+  /* .cp-transition__container--four {
+    background-image: radial-gradient(circle 654px at 0.6% 48%, rgba(12, 170, 255, 0.4) 0%, rgba(151, 255, 129, 0.4) 86.3%);
+  } */

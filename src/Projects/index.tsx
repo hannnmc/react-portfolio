@@ -22,23 +22,31 @@ const wrapperVariants = {
 }
 const squareVariants = {
   initial: {
-    opacity: 0,
-    scale: .3,
+    opacity: .6,
+    scale: .8,
   },
   animate: {
     opacity: 1,
     scale: 1,
   }
 }
+
+type Project = {
+  name: string;
+  title: string;
+  img: string;
+  desc: string;
+  live: string;
+  github: string;
+};
+
 const Projects = () => {
-    const [selectedSquare, setSelectedSquare] = useState<string | null>(null);
-    const renderSquares = () => {
     const projects = [
         {
             name: "one",
             title: "Cozybnb",
             img: project1photo,
-            desc: "Cozybnb is a pixel-perfect clone of Airbnb with interactive features such as viewing and managing listings, booking reservations, and writing reviews, built with JavaScript and a React/Redux front-end with a Rails back-end. Cozybnb features full user authentication where users can create an account, login with an existing account, or continue with a Demo user. Utilizing Flexbox CSS styling and Media Query, the application is also fully web-responsive and is optimized for screens of any size.",
+            desc: "Cozybnb is a Full stack Airbnb replica with core interactive features like browsing properties, making reservations, and writing reviews. It's built utilizing React/Redux front-end (JavaScript) and Ruby on Rails back-end while incorporating Authentication, Google Maps, Places, Geocoding APIs, and AWS S3 for a seamless user experience. Leveraging Media Queries and Flexbox CSS, Cozybnb is fully web-responsive and mobile friendly.",
             live: "sampleurl",
             github: "https://github.com/hannnmc/Cozybnb"
         },
@@ -46,7 +54,7 @@ const Projects = () => {
             name: "two",
             title: "Aviquest",
             img: project2photo,
-            desc: "Aviquest is a gamified task manager desktop-application that helps users stick to their goals and build good habits, built using MERN stack by a team of four engineers. Aviquest features many interactive features such as selecting an Avitar, create to-do lists, complete quests, and equip items. As an incentive for completing tasks and quests, users are rewarded with coins to purchase items in the Gachapon store. Aviquest is based on an honor system for those who are looking to self develop or get things done.",
+            desc: "Aviquest is a gamified task manager, aimed at fostering positive habits and goal achievement. Built by a dedicated team of four engineers, the application utilizes the MERN (MongoDB, Express, React, Node) Stack. By completing tasks and embarking on quests, users can access interactive features like Avatar customization, gear progression, Gachapon rewards, and real-time health management. Achieved via asynchronous components, Sprite animations, and carefully timed triggers.",
             live: "https://aviquest.herokuapp.com/",
             github: "https://github.com/whilekofman/aviquest"
         },
@@ -54,63 +62,60 @@ const Projects = () => {
             name: "three",
             title: "Budgit",
             img: project3photo,
-            desc: "Budgit is a single-paged personal expense/income tracking desktop-application that helps users visualize their finances by date, month, and categories, built with Vanilla Javascript, DOM manipulation, Chart.js, and Local Storage. Users can enter daily transactions as an income or an expense, as well as monthly income to help them easily budget their finance. Budgit is a work in progress with more features to come, such as viewing historical data, savings calculator, and cost-cutting recommendations.",
+            desc: "Budgit is a single-page budget tracking application that helps users manage their finance through data visualization. Developed with Vanilla JavaScript, DOM manipulation, Chart.js, and Local Storage, users can log daily transactions, monthly income, and one-time earnings. Users can view their spending habits by day, week, month, and categories, enabling informed financial decisions and budgeting.",
             live: "https://hannnmc.github.io/Budgit/",
             github: "https://github.com/hannnmc/Budgit"
         }
         ];
-          
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+    const renderSquares = () => {
+
     return projects.map((project, i) => (
     <motion.div 
         key={i}
         className={`square square--${project.name} flex flex-col items-center font-Mont`} 
-        // onClick={() => setSelectedSquare(project.name)}
+        onClick={() => setSelectedProject(project)}
         variants={squareVariants}
         transition={{ duration: .2, type: 'spring' }}
     >
         <img className='rounded-t-2xl' src={project.img} alt="" />
         <div className='p-4 flex flex-col items-center'>
-            <span className='text-l font-medium mb-2'>{project.title}</span>
-            <span className='text-base'>{project.desc}</span>
-        </div>
-        <div className='card-buttons pb-4 flex justify-between w-full'>
-            <button onClick={() => window.open(project.github, '_blank')} className='w-20 h-7 mx-4 bg-stone-100 text-slate-900 rounded-2xl'>
-                CODE
-            </button>
-            <button onClick={() => window.open(project.live, '_blank')} className='w-20 h-7 mx-4 bg-blue-700 text-white rounded-2xl'>
-                LIVE
-            </button>
+            <span className='text-l font-medium'>{project.title}</span>
+            {/* <span 
+                className='text-base project-desc flex-grow'>{project.desc}
+            </span> */}
         </div>
 
     </motion.div>    
     ));
   }
   return (
-    <div id='projects' className={`justify-self-center mt-60 mb-60 cp-transition cp-transition__container cp-transition__container--${selectedSquare}`}>
+    <div id='projects' className={`justify-self-center mt-60 mb-60 cp-transition cp-transition__container cp-transition__container--${selectedProject ? selectedProject.name : ""}`}>
       <AnimatePresence mode='wait' initial={false}>
-        {selectedSquare 
+        {selectedProject 
           ? (
             <motion.div 
-              className={`card card__wrapper card__wrapper--${selectedSquare}`}
+              className={`card card__wrapper card__wrapper--${selectedProject.name} font-Mont rounded-2xl`}
               key="card"
               variants={wrapperVariants}
               initial="initial"
               animate="animate"
               exit="exit"
             >
-              <div className="card__header">
-                <h2>Lorem ipsum</h2>
-                <button onClick={() => setSelectedSquare(null)}>
-                  <i className="fas fa-times fa-2x"/>
+            <img className="project-card-img rounded-l-2xl" src={selectedProject.img} alt="" />
+            <div className='w-full p-12 pt-6 flex flex-col'>
+                <button className='self-end' onClick={() => setSelectedProject(null)}>
+                    <i className="fas fa-times fa-2x"/>
                 </button>
-              </div>
-              <div className="card__content">
-                <div className="card__img-placeholder" />
-                <div className="card__text-placeholder">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Impedit ea neque quidem exercitationem possimus.
+                <div className="card__header flex justify-between mb-4">
+                    <h2>{selectedProject.title}</h2>
                 </div>
-              </div>
+                {/* <div className="card__content"></div> */}
+                <div className="card__text-placeholder w-full text-2xl">
+                    {selectedProject.desc}
+                </div>
+            </div>
             </motion.div>
           )
           : (

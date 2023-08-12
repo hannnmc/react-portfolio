@@ -11,28 +11,31 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({ isOn, setIsOn }) => {
 
   
   return (
-    <div 
-    className='switch-container sticky top-6 ml-6'
-    >
+    <div className='sticky top-6 ml-6'>
       <div 
-        className={`theme-switch ${isOn ? "darkmode" : ""}`} 
-        
-        onClick={() => setIsOn(!isOn)}
-        style={{ justifyContent: isOn ? 'flex-end' : 'flex-start' }}
+      className='switch-container absolute'
       >
-        <motion.div layout className="theme-switch-knob">
-          <AnimatePresence mode='wait' initial={false}>
-            <motion.i
-              className={`theme-icon far fa-${isOn ? 'moon' : 'sun'}`}
-              key={isOn ? 'moon' : 'sun'}
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 30, opacity: 0 }} 
-              transition={{ duration: 0.2 }}
-            />
-          </AnimatePresence>
-        </motion.div>
+        <div 
+          className={`theme-switch ${isOn ? "darkmode" : ""}`} 
+          
+          onClick={() => setIsOn(!isOn)}
+          style={{ justifyContent: isOn ? 'flex-end' : 'flex-start' }}
+        >
+          <motion.div layout className="theme-switch-knob">
+            <AnimatePresence mode='wait' initial={false}>
+              <motion.i
+                className={`theme-icon far fa-${isOn ? 'moon' : 'sun'}`}
+                key={isOn ? 'moon' : 'sun'}
+                initial={{ y: -30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 30, opacity: 0 }} 
+                transition={{ duration: 0.2 }}
+              />
+            </AnimatePresence>
+          </motion.div>
+        </div>
       </div>
+
     </div>
   );
 }
