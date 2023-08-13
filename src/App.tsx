@@ -13,6 +13,7 @@ import SectionHeader from "./SectionHeader";
 import Experiences from "./Experiences";
 import Switch from "./SwitchTheme";
 import Intro from "./Intro";
+import Skills from "./Skills";
 
 function App() {
 
@@ -58,6 +59,10 @@ function App() {
             <SectionHeader title={"EXPERIENCE"} />
 
             <Experiences />
+
+            <SectionHeader title={"SKILLS"} />
+
+            <Skills />
 
 
             <br/>

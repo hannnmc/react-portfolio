@@ -46,13 +46,13 @@ const Experiences = () => {
                 />
             )}
             
-        <motion.div className="flex items-center justify-center h-96 relative"
+        <motion.div className="flex items-center justify-center h-96 relative -mt-96"
         ref={ref}
         style={{
             opacity: scrollYProgress
         }}
         >
-            <div className="experience-timeline w-0.5 h-96 -top-96 absolute rounded-full"></div>
+            <div className="experience-timeline w-0.5 h-96 absolute rounded-full"></div>
         </motion.div>
         </div>
      );
