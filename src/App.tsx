@@ -30,7 +30,7 @@ function App() {
 
     return (
         <div  className="theme-wrapper" data-darkmode={isOn} >
-        <div className="App flex flex-col text-Mont relative">
+        <div className="App flex flex-col text-Mont relative z-0">
 
             <Switch  
             isOn={isOn}

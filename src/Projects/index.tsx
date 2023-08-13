@@ -47,7 +47,7 @@ const Projects = () => {
             name: "one",
             title: "Cozybnb",
             img: project1photo,
-            desc: "Cozybnb is a Full stack Airbnb replica with core interactive features like browsing properties, making reservations, and writing reviews. It's built utilizing React/Redux front-end (JavaScript) and Ruby on Rails back-end while incorporating Authentication, Google Maps, Places, Geocoding APIs, and AWS S3 for a seamless user experience. Leveraging Media Queries and Flexbox CSS, Cozybnb is fully web-responsive and mobile friendly.",
+            desc: "Cozybnb is a Full stack Airbnb replica with core interactive features for browsing properties, making reservations, and writing reviews. It's built utilizing React/Redux front-end (JavaScript) and Ruby on Rails back-end while incorporating Authentication, Google Maps, Places, Geocoding APIs, and AWS S3 for a seamless user experience. Leveraging Media Queries and Flexbox CSS, Cozybnb is fully web-responsive and mobile friendly.",
             live: "https://cozy-bnb.herokuapp.com/",
             github: "https://github.com/hannnmc/Cozybnb"
         },
@@ -92,7 +92,7 @@ const Projects = () => {
     ));
   }
   return (
-    <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container relative`}>
+    <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container relative z-10`}>
 
       <AnimatePresence mode='wait' initial={false}>
         {selectedProject 
