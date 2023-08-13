@@ -17,6 +17,7 @@ import Skills from "./Skills";
 import ContactButtons from "./ContactButtons";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
+import BackToTopButton from "./BackToTopButton";
 
 function App() {
 
@@ -78,6 +79,8 @@ function App() {
             <ContactForm />
 
             <Footer />
+
+            <BackToTopButton isOn={isOn}/>
 
         </div>
         </div>

@@ -48,7 +48,7 @@ const Experiences = () => {
                 />
             )}
             
-        <motion.div className="flex items-center justify-center h-96 relative -mt-96"
+        <motion.div className="flex items-center justify-center h-96 relative -mt-96 mb-24"
         ref={ref}
         style={{
             opacity: opacityScale
