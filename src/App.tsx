@@ -10,7 +10,7 @@ import Navbar from "./Navbar";
 import profilePhoto from "../src/assets/images/profile_photo.jpg";
 import Projects from "./Projects";
 import SectionHeader from "./SectionHeader";
-import Experience from "./Experience";
+import Experiences from "./Experiences";
 
 
 // Import the Switch component
@@ -61,7 +61,8 @@ function App() {
 
             <SectionHeader title={"EXPERIENCE"}/>
 
-            <Experience />
+            <Experiences />
+
 
             <br/>
             <br/>
