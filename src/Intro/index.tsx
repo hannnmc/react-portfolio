@@ -11,7 +11,7 @@ const Intro = () => {
     
 
     return ( 
-        <div className="self-center mt-28 w-1/2 text-lg text-center font-Mont">
+        <div className="self-center mt-24 w-1/2 text-xl text-center font-Mont">
             {introduction1}
             <br/>
             <br/>

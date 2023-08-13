@@ -9,6 +9,9 @@ import { ISourceOptions } from "tsparticles-engine";
 import Navbar from "./Navbar";
 import profilePhoto from "../src/assets/images/profile_photo.jpg";
 import Projects from "./Projects";
+import SectionHeader from "./SectionHeader";
+import Experience from "./Experience";
+
 
 // Import the Switch component
 import Switch from "./SwitchTheme";
@@ -42,15 +45,122 @@ function App() {
             
             <Navbar/>
             <div className="main-container flex flex-col items-center w-full">
-                <img className="w-52 rounded-full aspect-square mt-24" src={profilePhoto} alt="han" />
-                <span className="text-inherit text-4xl font-semibold font-Mont mt-8">
+                <div className="w-52 rounded-full aspect-square mt-24 overflow-hidden">
+                    <img  className="object-cover scale-125" src={profilePhoto} alt="han" />
+                </div>
+                <span className="text-inherit text-4xl font-semibold font-Mont mt-12">
                     Hi, I'm Han!
                 </span>
             </div>
 
             <Intro />
 
+            <SectionHeader title={"PROJECTS"}/>
+
             <Projects />
+
+            <SectionHeader title={"EXPERIENCE"}/>
+
+            <Experience />
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
         </div>
         </div>
     );

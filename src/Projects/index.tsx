@@ -92,7 +92,8 @@ const Projects = () => {
     ));
   }
   return (
-    <div id='projects' className={`justify-self-center mt-60 mb-60 cp-transition cp-transition__container`}>
+    <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container`}>
+
       <AnimatePresence mode='wait' initial={false}>
         {selectedProject 
           ? (
@@ -105,7 +106,7 @@ const Projects = () => {
               exit="exit"
             >
             <img className="project-card-img rounded-l-2xl" src={selectedProject.img} alt="" />
-            <div className='w-full px-12 py-6 flex flex-col overflow-visible'>
+            <div className='w-full px-12 py-6 flex flex-col'>
                 <button className='self-end' onClick={() => setSelectedProject(null)}>
                     <i className="fas fa-times fa-2x"/>
                 </button>
