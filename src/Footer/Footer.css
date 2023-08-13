@@ -1,0 +1,7 @@
+.footer {
+    border-top: 1px solid white;
+}
+
+[data-darkmode = false] .footer {
+    border-color: #222;
+}
