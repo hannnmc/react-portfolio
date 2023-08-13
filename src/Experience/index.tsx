@@ -15,7 +15,7 @@ const Experience: React.FC<ExperienceProps> = ({time, title, company, flow}) => 
 
     const ref = useRef<HTMLDivElement>(null);
 
-    const {scrollYProgress, scrollY } = useScroll({
+    const {scrollYProgress } = useScroll({
         target: ref,
         offset: ["2.2 1", "8 1"]
     });
