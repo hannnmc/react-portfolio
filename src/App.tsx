@@ -46,10 +46,10 @@ function App() {
             
             <Navbar />
             <div className="main-container flex flex-col items-center w-full">
-                <div className="w-52 rounded-full aspect-square mt-24 overflow-hidden">
+                <div className="w-52 rounded-full aspect-square mt-24 overflow-hidden sm:w-36 sm:mt-20">
                     <img  className="object-cover scale-125" src={profilePhoto} alt="han" />
                 </div>
-                <span className="text-inherit text-4xl font-semibold font-Mont mt-12">
+                <span className="text-inherit text-4xl font-semibold font-Mont mt-12 sm:mt-10 sm:text-3xl">
                     Hi, I'm Han!
                 </span>
             </div>
@@ -62,11 +62,11 @@ function App() {
 
             <SectionHeader title={"EXPERIENCE"} />
 
-            <Experiences />
+            {/* <Experiences /> */}
 
             <SectionHeader title={"SKILLS"} />
 
-            <Skills />
+            {/* <Skills /> */}
 
             <SectionHeader title={"CONTACT"} />
 

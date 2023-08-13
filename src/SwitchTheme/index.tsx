@@ -11,7 +11,7 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({ isOn, setIsOn }) => {
 
   
   return (
-    <div className='sticky top-6 ml-6 z-40'>
+    <div className='sticky top-6 ml-6 z-40 sm:ml-5'>
       <div 
       className='switch-container absolute z-50'
       >

@@ -39,3 +39,13 @@
     color: rgb(42, 5, 189);
   }
   
+  @media (max-width: 540px) {
+    .theme-switch {
+      width: 34px;
+      height: 34px;
+    }
+    .theme-switch-knob {
+      width: 24px;
+      height: 24px;
+    }
+  }

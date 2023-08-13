@@ -8,11 +8,11 @@
     align-items: center;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .cp-transition__container {
     min-height: 250px;
   }
-}
+} */
 
 .square {
   position: relative;
@@ -86,9 +86,15 @@
   /* height: calc(100% + 2px); */
 }
 
-/* @media (max-width: 768px) {
-  .card__img-placeholder {
-    height: 100px;
-    width: 100px;
+@media (max-width: 540px) {
+  .square {
+    width: 82%;
+    margin-top: 16px;
   }
-} */
+  .project-card-img {
+    width: 100%;
+  }
+  .card__header h2{
+    font-size: 16px;
+  }
+}

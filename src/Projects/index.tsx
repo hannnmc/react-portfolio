@@ -92,28 +92,28 @@ const Projects = () => {
     ));
   }
   return (
-    <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container relative z-10`}>
+    <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container relative z-10 sm:mt-10`}>
 
       <AnimatePresence mode='wait' initial={false}>
         {selectedProject 
           ? (
             <motion.div 
-              className={`card font-Mont rounded-2xl`}
+              className={`card font-Mont rounded-2xl sm:flex-col`}
               key="card"
               variants={wrapperVariants}
               initial="initial"
               animate="animate"
               exit="exit"
             >
-            <img className="project-card-img rounded-l-2xl" src={selectedProject.img} alt="" />
-            <div className='w-full px-12 py-6 flex flex-col'>
+            <img className="project-card-img rounded-l-2xl sm:rounded-t-2xl sm:rounded-bl-none sm:w-4/5" src={selectedProject.img} alt="" />
+            <div className='w-full px-12 py-6 flex flex-col sm:px-5 sm:py-6 sm:pb-4'>
                 <button className='self-end' onClick={() => setSelectedProject(null)}>
-                    <i className="fas fa-times fa-2x"/>
+                    <i className="fas fa-times fa-2x sm:text-base sm:absolute sm:right-10 sm:-mt-2"/>
                 </button>
                 <div className="card__header flex justify-between mb-4">
                     <h2>{selectedProject.title}</h2>
                 </div>
-                <div className="card__text-placeholder w-full text-xl leading-base">
+                <div className="w-full text-xl leading-base sm:text-sm sm:w-full sm:mb-1">
                     {selectedProject.desc}
                 </div>
                 <div className='card-buttons flex justify-between w-full mt-auto'>
@@ -130,7 +130,7 @@ const Projects = () => {
           )
           : (
             <motion.div 
-              className="cp-transition__squares-wrapper flex justify-center items-center "
+              className="cp-transition__squares-wrapper flex justify-center items-center sm:flex-col"
               key="squares"
               variants={wrapperVariants}
               initial="initial"

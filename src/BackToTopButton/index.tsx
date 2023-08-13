@@ -38,7 +38,9 @@ const BackToTopButton = ({ isOn }: BackToTopButtonProps) => {
       ${
         isOn ? "text-white" : "text-900"
       }
-      fixed bottom-32 right-16 rounded-full z-50 opacity-30 cursor-pointer text-5xl`}
+      fixed bottom-32 right-16 rounded-full z-50 opacity-30 cursor-pointer text-5xl
+      sm:bottom-10 sm:right-6 sm:text-3xl
+      `}
       onClick={scrollToTop}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
