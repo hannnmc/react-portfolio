@@ -1,8 +1,17 @@
 import React from "react";
 import "./Experiences.css"; 
 import Experience from "../Experience";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
 
 const Experiences = () => {
+
+    const ref = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "1.28 1"]
+    })
 
     const experiences = [
         {
@@ -12,14 +21,14 @@ const Experiences = () => {
             flow: true
         },
         {
-            time: "Aug. 2022 - Aug. 2023",
+            time: "Aug. 2021 - Aug. 2022",
             title: "Data Instructor",
             company: "DBC Edu and Tech Co.",
             flow: false
 
         },
         {
-            time: "Feb. 2019 - March. 2022",
+            time: "Feb. 2019 - March. 2021",
             title: "Account Executive",
             company: "T-Mobile US",
             flow: true
@@ -37,9 +46,14 @@ const Experiences = () => {
                 />
             )}
             
-        <div className="flex items-center justify-center h-96 relative">
-            <div className="w-0.5 h-96 -top-96 bg-black absolute"></div>
-        </div>
+        <motion.div className="flex items-center justify-center h-96 relative"
+        ref={ref}
+        style={{
+            opacity: scrollYProgress
+        }}
+        >
+            <div className="experience-timeline w-0.5 h-96 -top-96 absolute rounded-full"></div>
+        </motion.div>
         </div>
      );
 }

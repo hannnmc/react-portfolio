@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import Particles from "react-particles";
 import type { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
@@ -11,20 +11,17 @@ import profilePhoto from "../src/assets/images/profile_photo.jpg";
 import Projects from "./Projects";
 import SectionHeader from "./SectionHeader";
 import Experiences from "./Experiences";
-
-
-// Import the Switch component
 import Switch from "./SwitchTheme";
 import Intro from "./Intro";
 
 function App() {
+
     const particlesInit = useCallback(async (engine: Engine) => {
         await loadFull(engine);
     }, []);
 
     const [isOn, setIsOn] = useState(true);
 
-    // Dynamically select the particle options based on isOn value
     const particleOptions = isOn ? darkParticlesOptions : lightParticlesOptions;
 
     const toggleTheme = () => {
@@ -33,17 +30,16 @@ function App() {
 
     return (
         <div  className="theme-wrapper" data-darkmode={isOn} >
-        <div className="App flex flex-col text-Mont">
-            {/* Add the theme toggle switch */}
+        <div className="App flex flex-col text-Mont relative">
+
             <Switch  
             isOn={isOn}
-            setIsOn={toggleTheme} // Call toggleTheme when the switch is clicked
+            setIsOn={toggleTheme} 
             />
 
-            {/* Conditionally render the Particles component with a dynamic key */}
             <Particles key={isOn.toString()} options={particleOptions as ISourceOptions} init={particlesInit} />
             
-            <Navbar/>
+            <Navbar />
             <div className="main-container flex flex-col items-center w-full">
                 <div className="w-52 rounded-full aspect-square mt-24 overflow-hidden">
                     <img  className="object-cover scale-125" src={profilePhoto} alt="han" />
@@ -55,11 +51,11 @@ function App() {
 
             <Intro />
 
-            <SectionHeader title={"PROJECTS"}/>
+            <SectionHeader title={"PROJECTS"} />
 
             <Projects />
 
-            <SectionHeader title={"EXPERIENCE"}/>
+            <SectionHeader title={"EXPERIENCE"} />
 
             <Experiences />
 

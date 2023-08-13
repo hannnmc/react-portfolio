@@ -1,0 +1,7 @@
+.experience-timeline {
+    background-color: white;
+}
+
+[data-darkmode=false] .experience-timeline {
+    background-color: #222;
+}

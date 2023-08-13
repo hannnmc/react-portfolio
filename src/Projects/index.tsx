@@ -75,7 +75,7 @@ const Projects = () => {
     return projects.map((project, i) => (
     <motion.div 
         key={i}
-        className={`square square--${project.name} flex flex-col items-center font-Mont`} 
+        className={`square square--${project.name} flex flex-col items-center font-Mont relative`} 
         onClick={() => setSelectedProject(project)}
         variants={squareVariants}
         transition={{ duration: .2, type: 'spring' }}
@@ -92,7 +92,7 @@ const Projects = () => {
     ));
   }
   return (
-    <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container`}>
+    <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container relative`}>
 
       <AnimatePresence mode='wait' initial={false}>
         {selectedProject 
