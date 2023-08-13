@@ -1,7 +1,7 @@
 import React from "react";
 import "./Experiences.css"; 
 import Experience from "../Experience";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const Experiences = () => {
@@ -12,6 +12,8 @@ const Experiences = () => {
         target: ref,
         offset: ["0 1", "1.28 1"]
     })
+
+    const opacityScale = useTransform(scrollYProgress, [0.25, 0.68, 1], [0.1, 0.4, 1])
 
     const experiences = [
         {
@@ -49,7 +51,7 @@ const Experiences = () => {
         <motion.div className="flex items-center justify-center h-96 relative -mt-96"
         ref={ref}
         style={{
-            opacity: scrollYProgress
+            opacity: opacityScale
         }}
         >
             <div className="experience-timeline w-0.5 h-96 absolute rounded-full"></div>

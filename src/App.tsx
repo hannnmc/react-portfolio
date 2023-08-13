@@ -14,6 +14,8 @@ import Experiences from "./Experiences";
 import Switch from "./SwitchTheme";
 import Intro from "./Intro";
 import Skills from "./Skills";
+import ContactButtons from "./ContactButtons";
+import ContactForm from "./ContactForm";
 
 function App() {
 
@@ -63,6 +65,17 @@ function App() {
             <SectionHeader title={"SKILLS"} />
 
             <Skills />
+
+            <SectionHeader title={"CONTACT"} />
+
+            <div className="self-center font-Mont text-7xl mt-44">
+                Let's Connect.
+            </div>
+
+            <ContactButtons />
+
+            <ContactForm />
+
 
 
             <br/>

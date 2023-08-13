@@ -73,8 +73,11 @@ const skillsData: Skill[] = [
         {skillsData.map((skill, index) => (
           <SkillItem key={skill.name} index={index} skill={skill} originOffset={originOffset} itemVariants={itemVariants} delayPerPixel={delayPerPixel} inView={inView}/>
         ))}
-
-        <div className="animationInViewTrigger" ref={ref}></div>
+ 
+        {/* This Div is used to trigger the skills section animation */}
+        <div className="-mt-52 relative -z-10" 
+        ref={ref}>
+        </div>
 
       </div>
     );

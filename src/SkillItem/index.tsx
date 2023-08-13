@@ -43,6 +43,10 @@ interface SkillItemProps {
         const d = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
         delayRef.current = d * delayPerPixel;
         controls.start("visible");
+      } 
+    //   optional code to hide component when not in view
+      else {
+        controls.start("hidden");
       }
     }, [controls, delayPerPixel, inView]);
   
