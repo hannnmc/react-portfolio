@@ -1,6 +1,7 @@
 import React, { useRef, useLayoutEffect, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import "./Skills.css";
+import SkillItem from "../SkillItem";
 
 interface Skill {
     name: string;
@@ -41,9 +42,10 @@ const skillsData: Skill[] = [
     const delayPerPixel = 0.0008;
 
     const ref = useRef<HTMLDivElement>(null);
-    // const [inView, inViewRef] = useInView(ref);
+    const inView = useInView(ref);
   
     useEffect(() => {
+      if (inView) {}
       controls.start("visible");
     }, [controls]);
   
@@ -54,72 +56,31 @@ const skillsData: Skill[] = [
       },
       visible: (delayRef: { current: number }) => ({
         opacity: 1,
-        scale: 1,
+        scale: 1, 
         transition: { delay: delayRef.current },
       }),
+      hover: {
+        scale: 1.1, 
+      },
+      default: {
+        opacity: 1,
+        scale: 1, 
+      }
     };
   
     return (
       <div className="grid grid-cols-6 gap-16 p-4 w-auto self-center mt-32">
         {skillsData.map((skill, index) => (
-          <SkillItem key={skill.name} index={index} skill={skill} originOffset={originOffset} itemVariants={itemVariants} delayPerPixel={delayPerPixel} />
+          <SkillItem key={skill.name} index={index} skill={skill} originOffset={originOffset} itemVariants={itemVariants} delayPerPixel={delayPerPixel} inView={inView}/>
         ))}
+
+        <div className="animationInViewTrigger" ref={ref}></div>
+
       </div>
     );
   }
   
-  interface SkillItemProps {
-    index: number;
-    skill: Skill;
-    originOffset: React.MutableRefObject<{ top: number; left: number }>;
-    itemVariants: {
-      hidden: { opacity: number; scale: number };
-      visible: (delayRef: { current: number }) => { opacity: number; scale: number; transition: { delay: number } };
-    };
-    delayPerPixel: number;
-  }
   
-  function SkillItem({ index, skill, originOffset, itemVariants, delayPerPixel }: SkillItemProps) {
-    const controls = useAnimation();
-  
-    const delayRef = useRef(0);
-    const offset = useRef({ top: 0, left: 0 });
-    const ref = useRef<HTMLDivElement>(null);
-  
-    useLayoutEffect(() => {
-      const element = ref.current;
-      if (!element) return;
-  
-      offset.current = {
-        top: element.offsetTop,
-        left: element.offsetLeft,
-      };
-  
-      if (index === 0) {
-        originOffset.current = offset.current;
-      }
-    }, [delayPerPixel, index]);
-  
-    useEffect(() => {
-      const dx = Math.abs(offset.current.left - originOffset.current.left);
-      const dy = Math.abs(offset.current.top - originOffset.current.top);
-      const d = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-      delayRef.current = d * delayPerPixel;
-      controls.start("visible");
-    }, [controls, delayPerPixel]);
-  
-    return (
-      <motion.div
-        initial="hidden"
-        animate={controls}
-        variants={itemVariants}
-        custom={delayRef}
-        className="flex justify-center items-center"
-        ref={ref}
-      >
-        <img src={skill.img} alt={skill.name} className="w-16 h-16" />
-      </motion.div>
-    );
-  }
   
   export default Skills;
+  export type { Skill };
