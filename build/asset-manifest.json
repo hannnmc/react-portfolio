@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cc968e66.css",
+    "main.js": "/static/js/main.eb69b53a.js",
+    "static/media/budgit.png": "/static/media/budgit.1b92e8cc841a94407389.png",
+    "static/media/cozybnb_home.png": "/static/media/cozybnb_home.284e45707feef3cfb541.png",
+    "static/media/profile_photo.jpg": "/static/media/profile_photo.83e5adc50c5b50aeb3d6.jpg",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
+    "static/media/aviquest.png": "/static/media/aviquest.2b2eacc78f54aaa047eb.png",
+    "index.html": "/index.html",
+    "main.cc968e66.css.map": "/static/css/main.cc968e66.css.map",
+    "main.eb69b53a.js.map": "/static/js/main.eb69b53a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc968e66.css",
+    "static/js/main.eb69b53a.js"
+  ]
+}

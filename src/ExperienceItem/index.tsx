@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useTransform } from "framer-motion";
 import { useScroll } from "framer-motion";
 
@@ -48,7 +48,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, []);
+    }, [setMobileView,windowWidth,setWindowWidth]);
 
     const opacityScale = useTransform(
         scrollYProgress, 

@@ -1,5 +1,5 @@
-import React, { useRef, useLayoutEffect, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { useAnimation, useInView } from "framer-motion";
 import "./Skills.css";
 import SkillItem from "../SkillItem";
 
@@ -47,7 +47,7 @@ const skillsData: Skill[] = [
     useEffect(() => {
       if (inView) {}
       controls.start("visible");
-    }, [controls]);
+    }, [controls, inView]);
   
     const itemVariants = {
       hidden: {

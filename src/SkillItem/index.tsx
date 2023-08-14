@@ -1,5 +1,5 @@
 import React, { useRef, useLayoutEffect, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Skill } from "../Skills";
 
 interface SkillItemProps {
@@ -34,7 +34,7 @@ interface SkillItemProps {
       if (index === 0) {
         originOffset.current = offset.current;
       }
-    }, [delayPerPixel, index]);
+    }, [delayPerPixel, index, originOffset]);
   
     useEffect(() => {
       if(inView){
@@ -48,7 +48,7 @@ interface SkillItemProps {
       else {
         controls.start("hidden");
       }
-    }, [controls, delayPerPixel, inView]);
+    }, [controls, delayPerPixel, inView,originOffset]);
   
   return (
     <motion.div
