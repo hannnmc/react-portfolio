@@ -2,7 +2,7 @@ import React from "react";
 import "./ContactForm.css";
 
 const ContactForm = () => (
-  <div className="email-form-wrapper p-12 rounded-lg shadow text-start mt-32 min-w-[372px] self-center font-Mont">
+  <div className="email-form-wrapper p-12 rounded-lg shadow text-start mt-32 min-w-[372px] self-center font-Mont sm:mt-20">
     <form
       className="flex flex-col"
       action="https://formspree.io/f/mwkjvood"

@@ -62,15 +62,15 @@ function App() {
 
             <SectionHeader title={"EXPERIENCE"} />
 
-            {/* <Experiences /> */}
+            <Experiences />
 
             <SectionHeader title={"SKILLS"} />
 
-            {/* <Skills /> */}
+            <Skills />
 
             <SectionHeader title={"CONTACT"} />
 
-            <div className="self-center font-Mont text-7xl mt-44">
+            <div className="self-center font-Mont text-7xl mt-44 sm:text-4xl sm:mt-12">
                 Let's Connect.
             </div>
 

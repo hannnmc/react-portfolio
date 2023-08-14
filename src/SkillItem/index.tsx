@@ -61,6 +61,7 @@ interface SkillItemProps {
       whileHover={{ scale: 1.1 }}
       onMouseEnter={() => controls.start("hover")} 
       onMouseLeave={() => controls.start("default")}
+      onClick={() => controls.start("default")}
     >
       <img
         src={skill.img}

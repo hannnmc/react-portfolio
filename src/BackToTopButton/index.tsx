@@ -9,6 +9,7 @@ const BackToTopButton = ({ isOn }: BackToTopButtonProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
+    // console.log(window.scrollY);
     if (window.scrollY > 200) {
       setIsVisible(true);
     } else {
@@ -33,12 +34,12 @@ const BackToTopButton = ({ isOn }: BackToTopButtonProps) => {
       fa-solid fa-circle-arrow-up
       back-to-top-arrow
       ${
-        isVisible ? "opacity-100" : "opacity-0"
+        isVisible ? "opacity-30" : "opacity-0"
       } 
       ${
         isOn ? "text-white" : "text-900"
       }
-      fixed bottom-32 right-16 rounded-full z-50 opacity-30 cursor-pointer text-5xl
+      fixed bottom-32 right-16 rounded-full z-50 cursor-pointer text-5xl
       sm:bottom-10 sm:right-6 sm:text-3xl
       `}
       onClick={scrollToTop}

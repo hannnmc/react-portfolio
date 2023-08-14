@@ -69,7 +69,7 @@ const skillsData: Skill[] = [
     };
   
     return (
-      <div className="grid grid-cols-6 gap-16 p-4 w-auto self-center mt-32">
+      <div className="grid grid-cols-6 gap-16 p-4 w-auto self-center mt-32 sm:gap-6 sm:grid-cols-4 sm:mt-12">
         {skillsData.map((skill, index) => (
           <SkillItem key={skill.name} index={index} skill={skill} originOffset={originOffset} itemVariants={itemVariants} delayPerPixel={delayPerPixel} inView={inView}/>
         ))}

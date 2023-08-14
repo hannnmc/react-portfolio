@@ -25,7 +25,7 @@ const contactButtons = [
 ];
 
 export const ContactButtons = () => (
-  <div className="contact-buttons flex gap-12 text-center self-center mt-16">
+  <div className="contact-buttons flex gap-12 text-center self-center mt-16 sm:gap-8 sm:mt-12">
     {contactButtons.map((button, index) => (
       <motion.a
         key={index}
@@ -34,7 +34,7 @@ export const ContactButtons = () => (
         rel="noopener noreferrer"
       >
         <motion.button
-          className="contact-button text-4xl"
+          className="contact-button text-4xl sm:text-2xl"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >

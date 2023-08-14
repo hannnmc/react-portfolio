@@ -1,6 +1,6 @@
 import React from "react";
 import "./Experiences.css"; 
-import Experience from "../Experience";
+import ExperienceItem from "../ExperienceItem";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -10,7 +10,7 @@ const Experiences = () => {
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 1", "1.28 1"]
+        offset: ["-18 1", "1.28 1"]
     })
 
     const opacityScale = useTransform(scrollYProgress, [0.25, 0.68, 1], [0.1, 0.4, 1])
@@ -37,9 +37,9 @@ const Experiences = () => {
         }
     ]
     return ( 
-        <div className="w-full font-Mont mt-32 text-2xl self-center relative">
+        <div className="w-full font-Mont mt-32 text-2xl self-center relative sm:overflow-x-hidden sm:pt-12 sm:mt-16">
             {experiences.map((e, i) =>
-                <Experience
+                <ExperienceItem
                 key={i}  
                 time={e.time}
                 title={e.title}
@@ -48,7 +48,7 @@ const Experiences = () => {
                 />
             )}
             
-        <motion.div className="flex items-center justify-center h-96 relative -mt-96 mb-24"
+        <motion.div className="flex items-center justify-center h-96 relative -mt-96 mb-24 sm:-mt-80 sm:h-80"
         ref={ref}
         style={{
             opacity: opacityScale
