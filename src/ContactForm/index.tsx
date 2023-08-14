@@ -8,7 +8,7 @@ const ContactForm = () => (
       action="https://formspree.io/f/mwkjvood"
       method="POST"
     >
-      <div className="flex justify-between gap-0">
+      <div className="flex justify-between gap-0 sm:gap-2">
         <div className="w-1/2 space-y-3">
           <label htmlFor="name" className="mb-1">
             NAME
@@ -18,7 +18,7 @@ const ContactForm = () => (
             name="name"
             id="name"
             required
-            className="form-input w-full h-10 border border-gray-400 rounded-l px-2 focus:outline-none focus:border-blue-500"
+            className="form-input w-full h-10 border border-gray-400 rounded-l px-2 focus:outline-none focus:border-blue-500 sm:rounded"
           />
         </div>
         <div className="w-1/2 space-y-3">
@@ -30,7 +30,7 @@ const ContactForm = () => (
             name="email"
             id="email"
             required
-            className="form-input w-full h-10 border border-gray-400 rounded-r px-2 focus:outline-none focus:border-blue-500 border-l-0"
+            className="form-input w-full h-10 border border-gray-400 rounded-r px-2 focus:outline-none focus:border-blue-500 border-l-0 sm:rounded"
           />
         </div>
       </div>

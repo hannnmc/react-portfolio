@@ -21,19 +21,22 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
 
     const {scrollYProgress } = useScroll({
         target: ref,
-        offset: mobileView ? ["0 1", "4 1"] : ["2.2 1", "8 1"]
+        offset: mobileView ? ["0 1", "1.8 1"] : ["2.2 1", "8 1"]
     });
 
     const xScales = mobileView ?
     [
-        flow ? (-200) : (windowWidth),
-        flow ? (windowWidth / 2) - 181 : (windowWidth /2) + 5
+        // flow ? (-200) : (windowWidth),
+        // flow ? (windowWidth / 2) - 194 : (windowWidth /2) - 3
+        flow ? -10 : (windowWidth) - 176,
+        flow ? (windowWidth / 2) - 195 : (windowWidth /2) -3
     ] : [
         flow ? (windowWidth /10) : (windowWidth /1.11 - 376),
         flow ? (windowWidth / 2) - 394 : (windowWidth /2) - 30
     ]
 
     useEffect(() => {
+        if (mobileView) return;
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
             if (windowWidth > 540) {
@@ -48,11 +51,13 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [setMobileView,windowWidth,setWindowWidth]);
+    }, [windowWidth]);
 
     const opacityScale = useTransform(
         scrollYProgress, 
-        mobileView ?  [.4, .86] : [0, 1] ,
+        // mobileView ?  [.7, 1] : [0, 1] 
+        mobileView ?  [.4, .86] : [0, 1]
+        ,
         mobileView ? [0, 1] : [0, 1] 
         )
 
@@ -67,7 +72,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
                 ]),
             opacity: opacityScale
         }}
-        className="flex flex-col w-96 text-center gap-2 mb-6 scale-50 sm:w-44"
+        className="flex flex-col w-96 text-center gap-2 mb-6 scale-50 sm:w-48"
         >
             <span className="text-sm opacity-75 sm:text-xs">
                 {time}
