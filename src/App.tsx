@@ -18,6 +18,7 @@ import ContactButtons from "./ContactButtons";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
 import BackToTopButton from "./BackToTopButton";
+import { motion } from "framer-motion";
 
 function App() {
 
@@ -73,8 +74,20 @@ function App() {
             <div className="self-center font-Mont text-7xl mt-44 sm:text-4xl sm:mt-12">
                 Let's Connect.
             </div>
-
+            
             <ContactButtons />
+
+            <motion.a 
+            target='_blank' 
+            href='/assets/Han Chen Resume 081323.pdf' 
+            className="resume-button font-Mont self-center text-xl px-4 py-3 flex gap-2 rounded-xl mt-24 sm:py-2 sm:px-3 sm:text-base sm:mt-8"
+            whileHover={{scale : 1.1}}
+            >
+                <i className="fa-regular fa-file text-xl sm:text-base"></i> 
+                Full Resume
+            </motion.a>
+
+            
 
             <ContactForm />
 

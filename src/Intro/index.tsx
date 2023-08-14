@@ -3,11 +3,11 @@ import React from "react";
 const Intro = () => {
 
     const introduction1 = 
-    "I am a Full Stack Software Developer at Stellar, with a background as an Instructor and a B2B Account Executive. My passion for technology led me to take a pivotal step in my career by transitioning to tech and enrolling in a coding bootcamp in the summer of 2022 - App Academy. My core stack is React, Ruby on Rails, Node.js, and PostgreSQL, but I’m also familiar with TypeScript, Angular, MongoDB, Express, and more.  I am always looking to learn new technologies, and I love the feeling of finally figuring out the solution to a problem."
+    "I'm a Full Stack Software Developer at Stellar and a former Data Instructor and Account Executive. My software development journey began when I took a decisive step and joined App Academy in the summer of 2022. Since then, I've thoroughly enjoyed learning new technologies and the feeling of finally figuring out the solution to a problem."
 
 
     const introduction2 = 
-    "When I’m not coding, I enjoy exploring national parks, riding the bike, playing sports, and watching movies."
+    "When I'm not coding, I enjoy exploring national parks, cycling, playing sports, and catching up on movies."
     
 
     return ( 

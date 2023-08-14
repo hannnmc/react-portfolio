@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Experiences.css"; 
 import ExperienceItem from "../ExperienceItem";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -7,13 +7,20 @@ import { useRef } from "react";
 const Experiences = () => {
 
     const ref = useRef<HTMLDivElement>(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [mobileView, setMobileView ] = useState((windowWidth < 541));
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["-18 1", "1.28 1"]
+        offset: mobileView ? 
+        ["-1 1", "1.75 1"] : 
+        ["-18 1", "1.28 1"]
     })
 
-    const opacityScale = useTransform(scrollYProgress, [0.25, 0.68, 1], [0.1, 0.4, 1])
+    const opacityScale = useTransform(
+        scrollYProgress, [0.25, 0.68, 1], [0.1, 0.4, 1]
+        
+        )
 
     const experiences = [
         {
@@ -45,6 +52,10 @@ const Experiences = () => {
                 title={e.title}
                 company={e.company}
                 flow={e.flow}
+                mobileView={mobileView}
+                setMobileView={setMobileView}
+                windowWidth={windowWidth}
+                setWindowWidth={setWindowWidth}
                 />
             )}
             

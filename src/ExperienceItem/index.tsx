@@ -9,31 +9,25 @@ type ExperienceItemProps = {
     title: string;
     company: string;
     flow: boolean;
+    mobileView: boolean;
+    setMobileView:React.Dispatch<React.SetStateAction<boolean>>;
+    windowWidth:number;
+    setWindowWidth:React.Dispatch<React.SetStateAction<number>>;
 }
 
-const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, flow}) => {
+const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, flow, mobileView, setMobileView, windowWidth, setWindowWidth}) => {
 
     const ref = useRef<HTMLDivElement>(null);
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [mobileView, setMobileView ] = useState((windowWidth < 541));
-    
     const {scrollYProgress } = useScroll({
         target: ref,
         offset: mobileView ? ["0 1", "4 1"] : ["2.2 1", "8 1"]
     });
-    
-    // useEffect(()=>{
-    //     console.log(mobileView, windowWidth, window.scrollY);
-    // },[mobileView, windowWidth, window.scrollY])
-
 
     const xScales = mobileView ?
     [
         flow ? (-200) : (windowWidth),
-        flow ? (windowWidth / 2) - 180 : (windowWidth /2) + 4
-        // flow ? (windowWidth /10) : (windowWidth /1.11 - 376),
-        // flow ? (windowWidth / 2) - 394 : (windowWidth /2) - 30
+        flow ? (windowWidth / 2) - 181 : (windowWidth /2) + 5
     ] : [
         flow ? (windowWidth /10) : (windowWidth /1.11 - 376),
         flow ? (windowWidth / 2) - 394 : (windowWidth /2) - 30
@@ -56,7 +50,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
         };
     }, []);
 
-    const opacityScale = useTransform(scrollYProgress, [0, 1], [0, 1])
+    const opacityScale = useTransform(
+        scrollYProgress, 
+        mobileView ?  [.4, .86] : [0, 1] ,
+        mobileView ? [0, 1] : [0, 1] 
+        )
 
     return (
         <motion.div 
