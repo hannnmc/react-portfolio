@@ -70,13 +70,27 @@ const Projects = () => {
         ];
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+    const handleSelect = (project : Project) => {
+      setSelectedProject(project);
+
+      if (window.innerWidth < 541) {
+        const projectElement = document.getElementById("projects");
+  
+        if (projectElement) {
+          projectElement.scrollIntoView({
+            behavior: "smooth", // Use smooth scrolling for a smoother effect
+          });
+        }
+      }
+    }
+
     const renderSquares = () => {
 
     return projects.map((project, i) => (
     <motion.div 
         key={i}
         className={`square square--${project.name} flex flex-col items-center font-Mont relative`} 
-        onClick={() => setSelectedProject(project)}
+        onClick={() => handleSelect(project)}
         variants={squareVariants}
         transition={{ duration: .2, type: 'spring' }}
     >
