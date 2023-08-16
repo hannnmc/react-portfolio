@@ -26,7 +26,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
         window.innerHeight < 1200 ? 
         ["0 1", "4 1"]
         :
-        ["2.2 1", "8 1"]
+        ["2 1", "6 1"]
     });
 
     const xScales = mobileView ?
@@ -43,11 +43,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
         flow ? (windowWidth /10) : (windowWidth /1.11 - 376),
         flow ? (windowWidth / 2) - 394 : (windowWidth /2) - 30
     ]
-
-    const dotOpacityScale = useTransform(
-        scrollYProgress, [0.6, 0.74, 0.8], [0.01, 0.3, 1]
-    )
-
+    
     useEffect(() => {
         if (mobileView) return;
         const handleResize = () => {
@@ -58,13 +54,17 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
                 setMobileView(false);
             }
         };
-
+        
         window.addEventListener("resize", handleResize);
-
+        
         return () => {
             window.removeEventListener("resize", handleResize);
         };
     }, [windowWidth]);
+
+    const dotOpacityScale = useTransform(
+        scrollYProgress, [0.74, 0.88, 0.92], [0.01, 0.3, 1]
+    )
 
     const opacityScale = useTransform(
         scrollYProgress, 
