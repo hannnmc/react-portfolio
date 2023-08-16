@@ -19,8 +19,8 @@ const Experiences = () => {
 
     const opacityScale = useTransform(
         scrollYProgress, [0.25, 0.68, 1], [0.1, 0.4, 1]
-        
         )
+
 
     const experiences = [
         {
@@ -66,7 +66,19 @@ const Experiences = () => {
         }}
         >
             <div className="experience-timeline w-0.5 h-96 absolute rounded-full"></div>
+
+            {/* <motion.div
+            className="-mt-60 rounded-full h-2 w-2 absolute bg-white"
+            style={{opacity: dotOpacityScale}}
+            ></motion.div>
+            <motion.div
+            className="rounded-full h-2 w-2 absolute bg-white"
+            style={{opacity: dotOpacityScale}}
+            ></motion.div> */}
+
+            
         </motion.div>
+  
         </div>
      );
 }

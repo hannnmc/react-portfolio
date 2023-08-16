@@ -40,6 +40,10 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
         flow ? (windowWidth / 2) - 394 : (windowWidth /2) - 30
     ]
 
+    const dotOpacityScale = useTransform(
+        scrollYProgress, [0.6, 0.74, 0.8], [0.01, 0.3, 1]
+    )
+
     useEffect(() => {
         if (mobileView) return;
         const handleResize = () => {
@@ -66,6 +70,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
         )
 
     return (
+        <div className="relative">
         <motion.div 
         ref={ref}
         style={{
@@ -87,7 +92,19 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
             <span className="text-xl sm:text-sm">
                 {company}
             </span>
+
+
         </motion.div>
+        {!mobileView && (
+            <motion.div
+            className="rounded-full h-2 w-2 absolute bg-white -m-3 -mt-20"
+            style={{
+                opacity: dotOpacityScale,
+                x: window.innerWidth/2
+            }}
+            ></motion.div>
+        )}
+        </div>
     );
 }
  
