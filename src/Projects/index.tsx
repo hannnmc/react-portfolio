@@ -73,15 +73,15 @@ const Projects = () => {
     const handleSelect = (project : Project) => {
       setSelectedProject(project);
 
-      if (window.innerWidth < 541) {
-        const projectElement = document.getElementById("projects");
+
+        const projectElement = document.getElementById("project");
   
         if (projectElement) {
           projectElement.scrollIntoView({
-            behavior: "smooth", // Use smooth scrolling for a smoother effect
+            behavior: "smooth", 
           });
         }
-      }
+      
     }
 
     const renderSquares = () => {
@@ -97,9 +97,6 @@ const Projects = () => {
         <img className='rounded-t-2xl' src={project.img} alt="" />
         <div className='p-4 flex flex-col items-center'>
             <span className='text-l font-semibold'>{project.title}</span>
-            {/* <span 
-                className='text-base project-desc flex-grow'>{project.desc}
-            </span> */}
         </div>
 
     </motion.div>    
@@ -107,7 +104,9 @@ const Projects = () => {
   }
   return (
     <div className={`justify-self-center mt-16 mb-34 cp-transition cp-transition__container relative z-10 sm:mt-10`}>
-
+      {window.innerWidth < 541 && (
+        <div id='project' className='absolute'></div>  
+      )}
       <AnimatePresence mode='wait' initial={false}>
         {selectedProject 
           ? (
@@ -119,6 +118,7 @@ const Projects = () => {
               animate="animate"
               exit="exit"
             >
+                          
             <img className="project-card-img rounded-l-2xl sm:rounded-t-2xl sm:rounded-bl-none sm:w-4/5" src={selectedProject.img} alt="" />
             <div className='w-full px-12 py-6 flex flex-col sm:px-5 sm:py-6 sm:pb-4'>
                 <button className='self-end' onClick={() => setSelectedProject(null)}>

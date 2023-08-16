@@ -86,6 +86,10 @@
   /* height: calc(100% + 2px); */
 }
 
+#project {
+  margin-top: -1220px;
+}
+
 @media (max-width: 540px) {
   .square {
     width: 82%;
