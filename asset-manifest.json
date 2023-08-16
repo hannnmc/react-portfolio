@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b0356758.css",
+    "main.css": "/static/css/main.6c6d6daf.css",
     "main.js": "/static/js/main.9cafa453.js",
     "static/media/budgit.png": "/static/media/budgit.1b92e8cc841a94407389.png",
     "static/media/cozybnb_home.png": "/static/media/cozybnb_home.284e45707feef3cfb541.png",
@@ -8,11 +8,11 @@
     "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
     "static/media/aviquest.png": "/static/media/aviquest.2b2eacc78f54aaa047eb.png",
     "index.html": "/index.html",
-    "main.b0356758.css.map": "/static/css/main.b0356758.css.map",
+    "main.6c6d6daf.css.map": "/static/css/main.6c6d6daf.css.map",
     "main.9cafa453.js.map": "/static/js/main.9cafa453.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0356758.css",
+    "static/css/main.6c6d6daf.css",
     "static/js/main.9cafa453.js"
   ]
 }
