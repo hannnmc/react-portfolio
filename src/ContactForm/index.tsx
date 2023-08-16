@@ -30,7 +30,7 @@ const ContactForm = () => (
             name="email"
             id="email"
             required
-            className="form-input w-full h-10 border border-gray-400 rounded-r px-2 focus:outline-none focus:border-blue-500 border-l-0 sm:rounded"
+            className="form-input w-full h-10 border border-gray-400 rounded-r px-2 focus:outline-none focus:border-blue-500 border-l-0 sm:rounded sm:border-l"
           />
         </div>
       </div>
