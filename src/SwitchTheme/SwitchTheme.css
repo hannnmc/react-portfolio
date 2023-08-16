@@ -3,7 +3,7 @@
     width: 72px;
     background-image: radial-gradient(circle farthest-corner at 10% 20%, 
                       rgb(243, 231, 194) 20%, 
-                      rgb(238, 188, 71) 100.2%);
+                      #FFD0B7 100.2%);
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@
   }
   
   .theme-icon {
-    color: #e8a62b;
+    color: #FFD0B7;
   }
   
   [data-darkmode="true"] .theme-switch {

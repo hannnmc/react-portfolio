@@ -30,6 +30,8 @@ function App() {
 
     const particleOptions = isOn ? darkParticlesOptions : lightParticlesOptions;
 
+    const mobileView = window.innerWidth < 541;
+
     const toggleTheme = () => {
         setIsOn(!isOn);
     };
@@ -59,7 +61,7 @@ function App() {
 
             <SectionHeader title={"PROJECTS"} />
 
-            <Projects />
+            <Projects mobileView={mobileView}/>
 
             <SectionHeader title={"EXPERIENCE"} />
 
