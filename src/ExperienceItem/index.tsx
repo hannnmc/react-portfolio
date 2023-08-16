@@ -22,7 +22,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
     const {scrollYProgress } = useScroll({
         target: ref,
         offset: mobileView ? 
-        ["0 1", "1.8 1"] : ["2.2 1", "8 1"]
+        ["0 1", "1.8 1"] : 
+        window.innerHeight < 1200 ? 
+        ["0 1", "4 1"]
+        :
+        ["2.2 1", "8 1"]
     });
 
     const xScales = mobileView ?
