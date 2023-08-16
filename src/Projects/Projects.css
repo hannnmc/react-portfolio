@@ -129,6 +129,6 @@ left: calc(2.4% - 16px);
 right: calc(2.4% - 16px);
 }
 
-[data-darkmode] .scroll-btn {
+[data-darkmode = false] .scroll-btn {
   fill: #FFD0B7;
 }
