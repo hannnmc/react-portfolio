@@ -98,6 +98,11 @@ object-fit: cover;
 margin-top: -1172px;
 } */
 
+.square-img {
+  aspect-ratio: 1.399;
+  object-fit: cover;
+}
+
 @media (max-width: 540px) {
 .square {
   width: 82%;

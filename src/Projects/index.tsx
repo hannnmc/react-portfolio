@@ -4,6 +4,7 @@ import './Projects.css';
 import project1photo from "../assets/images/cozybnb_home.png";
 import project2photo from "../assets/images/aviquest.png";
 import project3photo from "../assets/images/budgit.png";
+import project4photo from "../assets/images/portfolio.png";
 
 
 const wrapperVariants = {
@@ -66,6 +67,14 @@ const Projects = ({mobileView} : {mobileView: boolean}) => {
             desc: "Budgit is a single-page budget tracking application that helps users manage their finance through data visualization. Developed with Vanilla JavaScript, DOM manipulation, Chart.js, and Local Storage, users can log daily transactions, monthly income, and one-time earnings. Users can view their spending habits by day, week, month, and categories, enabling informed financial decisions and budgeting.",
             live: "https://hannnmc.github.io/Budgit/",
             github: "https://github.com/hannnmc/Budgit"
+        },
+        {
+            name: "four",
+            title: "Porfolio",
+            img: project4photo,
+            desc: "This project is my personal portfolio and I took the opportunity to hone my skills in TypeScript, Tailwind CSS, Framer Motion, Media Queries, and React. It was a ton of fun experimenting with the different animations that comes with Framer Motion and I learned a great deal fine tuning the animation while keeping the site web-responsive.",
+            live: "https://hanchen.dev",
+            github: "https://github.com/hannnmc/react-portfolio"
         }
         
       ];
@@ -74,7 +83,7 @@ const Projects = ({mobileView} : {mobileView: boolean}) => {
       const scrollableDivRef = useRef<HTMLDivElement | null>(null); 
       const [showPrevBtn, setShowPrevBtn] = useState(false);
       const [showNextBtn, setShowNextBtn] = useState(false);
-      const presetScroll = 300;
+      const presetScroll = 467;
     
       useEffect(() => {
         const divRef = scrollableDivRef.current;
@@ -218,7 +227,7 @@ const Projects = ({mobileView} : {mobileView: boolean}) => {
                       minWidth: window.innerWidth > 1400 ? "415px" : mobileView ? "300" : "360px"
                     }}
                   >
-                    <img className='rounded-t-2xl' src={project.img} alt="" />
+                    <img className='square-img rounded-t-2xl' src={project.img} alt="" />
                     <div className='p-4 flex flex-col items-center'>
                       <span className='text-l font-semibold'>{project.title}</span>
                     </div>
