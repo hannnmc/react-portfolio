@@ -72,7 +72,7 @@ const Projects = ({mobileView} : {mobileView: boolean}) => {
             name: "four",
             title: "Porfolio",
             img: project4photo,
-            desc: "This project is my personal portfolio and I took the opportunity to hone my skills in TypeScript, Tailwind CSS, Framer Motion, Media Queries, and React. It was a ton of fun experimenting with the different animations that comes with Framer Motion and I learned a great deal fine tuning the animation while keeping the site web-responsive.",
+            desc: "I built my own portfolio website and utilized the opportunity to brush up my skills in TypeScript, Tailwind CSS, Framer Motion, Media Queries, and React. It was a ton of fun experimenting with different animations that come with Framer Motion and I learned a great deal in optimizing animations and fine tuning them for various screen sizes.",
             live: "https://hanchen.dev",
             github: "https://github.com/hannnmc/react-portfolio"
         }
