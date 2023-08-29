@@ -55,6 +55,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
             }
         };
         
+        
         window.addEventListener("resize", handleResize);
         
         return () => {
