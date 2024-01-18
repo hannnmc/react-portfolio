@@ -3,7 +3,7 @@ import React from "react";
 const Intro = () => {
 
     const introduction1 = 
-    "I'm a Full stack software engineer and I love creating stunning and useful web-applications."
+    "I'm a Full stack Software Engineer and I love creating stunning and useful web-applications."
 
 
     const introduction2 = 
