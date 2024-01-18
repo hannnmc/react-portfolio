@@ -91,13 +91,13 @@ const Projects = ({mobileView} : {mobileView: boolean}) => {
           const handleScroll = () => {
             const { scrollWidth, scrollLeft, clientWidth } = divRef;
             setShowPrevBtn(scrollLeft > 0);
-            setShowNextBtn(scrollLeft + clientWidth < scrollWidth);
+            setShowNextBtn(scrollLeft + clientWidth < scrollWidth - 5);
           };
           divRef.addEventListener('scroll', handleScroll);
           handleScroll();
           return () => divRef.removeEventListener('scroll', handleScroll);
         }
-      }, []);
+      }, [scrollableDivRef.current?.scrollLeft]);
     
       const scrollNext = () => {
         const divRef = scrollableDivRef.current;
