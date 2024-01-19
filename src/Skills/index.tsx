@@ -6,36 +6,36 @@ import SkillItem from "../SkillItem";
 interface Skill {
     name: string;
     img: string;
+    url: string;
 }
 
 const skillsData: Skill[] = [
-    { name: 'JavaScript', img: 'https://github.com/get-icon/geticon/raw/master/icons/javascript.svg' },
-    { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png' },
-    { name: 'React', img: 'https://github.com/get-icon/geticon/raw/master/icons/react.svg' },
-    { name: 'Angular', img: 'https://github.com/get-icon/geticon/raw/master/icons/angular-icon.svg' },
-    { name: 'Redux', img: 'https://github.com/get-icon/geticon/raw/master/icons/redux.svg' },
-    { name: 'Ruby', img: 'https://github.com/get-icon/geticon/raw/master/icons/ruby.svg' },
-    { name: 'Rails', img: 'https://github.com/get-icon/geticon/raw/master/icons/rails.svg' },
-    { name: 'C#', img: 'https://github.com/get-icon/geticon/raw/master/icons/c-sharp.svg' },
-    // { name: 'jQuery', img: 'https://github.com/get-icon/geticon/raw/master/icons/jquery-icon.svg' },
-    { name: '.Net', img: 'https://github.com/get-icon/geticon/raw/master/icons/dotnet.svg' },
-    { name: 'CSS3', img: 'https://github.com/get-icon/geticon/raw/master/icons/css-3.svg' },
-    { name: 'Sass', img: 'https://github.com/get-icon/geticon/raw/master/icons/sass.svg' },
-    { name: 'HTML5', img: 'https://github.com/get-icon/geticon/raw/master/icons/html-5.svg' },
-    { name: 'Node.js', img: 'https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg' },
-    { name: 'Express', img: 'https://github.com/get-icon/geticon/raw/master/icons/express.svg' },
-    { name: 'Python', img: 'https://github.com/get-icon/geticon/raw/master/icons/python.svg' },
-    { name: 'pandas', img: 'https://github.com/get-icon/geticon/raw/master/icons/pandas-icon.svg' },
-    { name: 'NumPy', img: 'https://github.com/get-icon/geticon/raw/master/icons/numpy-icon.svg' },
-    { name: 'MongoDB', img: 'https://github.com/get-icon/geticon/raw/master/icons/mongodb-icon.svg' },
-    { name: 'PostgreSQL', img: 'https://github.com/get-icon/geticon/raw/master/icons/postgresql.svg' },
-    { name: 'Git', img: 'https://github.com/get-icon/geticon/raw/master/icons/git-icon.svg' },
-    { name: 'npm', img: 'https://github.com/get-icon/geticon/raw/master/icons/npm.svg' },
-    { name: 'webpack', img: 'https://github.com/get-icon/geticon/raw/master/icons/webpack.svg' },
-    // { name: 'Visual Studio Code', img: 'https://github.com/get-icon/geticon/raw/master/icons/visual-studio-code.svg' },
-    { name: 'AWS', img: 'https://github.com/get-icon/geticon/raw/master/icons/aws.svg' },
-    { name: 'Azure', img: 'https://github.com/get-icon/geticon/raw/master/icons/azure-icon.svg' },
-  ];
+  { name: 'JavaScript', img: 'https://github.com/get-icon/geticon/raw/master/icons/javascript.svg', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+  { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png', url: 'https://www.typescriptlang.org/' },
+  { name: 'React', img: 'https://github.com/get-icon/geticon/raw/master/icons/react.svg', url: 'https://reactjs.org/' },
+  { name: 'Angular', img: 'https://github.com/get-icon/geticon/raw/master/icons/angular-icon.svg', url: 'https://angular.io/' },
+  { name: 'Redux', img: 'https://github.com/get-icon/geticon/raw/master/icons/redux.svg', url: 'https://redux.js.org/' },
+  { name: 'Ruby', img: 'https://github.com/get-icon/geticon/raw/master/icons/ruby.svg', url: 'https://www.ruby-lang.org/' },
+  { name: 'Rails', img: 'https://github.com/get-icon/geticon/raw/master/icons/rails.svg', url: 'https://rubyonrails.org/' },
+  { name: 'C#', img: 'https://github.com/get-icon/geticon/raw/master/icons/c-sharp.svg', url: 'https://docs.microsoft.com/en-us/dotnet/csharp/' },
+  { name: '.Net', img: 'https://github.com/get-icon/geticon/raw/master/icons/dotnet.svg', url: 'https://dotnet.microsoft.com/' },
+  { name: 'CSS3', img: 'https://github.com/get-icon/geticon/raw/master/icons/css-3.svg', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+  { name: 'Sass', img: 'https://github.com/get-icon/geticon/raw/master/icons/sass.svg', url: 'https://sass-lang.com/' },
+  { name: 'HTML5', img: 'https://github.com/get-icon/geticon/raw/master/icons/html-5.svg', url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
+  { name: 'Node.js', img: 'https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg', url: 'https://nodejs.org/' },
+  { name: 'Express', img: 'https://github.com/get-icon/geticon/raw/master/icons/express.svg', url: 'https://expressjs.com/' },
+  { name: 'Python', img: 'https://github.com/get-icon/geticon/raw/master/icons/python.svg', url: 'https://www.python.org/' },
+  { name: 'pandas', img: 'https://github.com/get-icon/geticon/raw/master/icons/pandas-icon.svg', url: 'https://pandas.pydata.org/' },
+  { name: 'NumPy', img: 'https://github.com/get-icon/geticon/raw/master/icons/numpy-icon.svg', url: 'https://numpy.org/' },
+  { name: 'MongoDB', img: 'https://github.com/get-icon/geticon/raw/master/icons/mongodb-icon.svg', url: 'https://www.mongodb.com/' },
+  { name: 'PostgreSQL', img: 'https://github.com/get-icon/geticon/raw/master/icons/postgresql.svg', url: 'https://www.postgresql.org/' },
+  { name: 'Git', img: 'https://github.com/get-icon/geticon/raw/master/icons/git-icon.svg', url: 'https://git-scm.com/' },
+  { name: 'npm', img: 'https://github.com/get-icon/geticon/raw/master/icons/npm.svg', url: 'https://www.npmjs.com/' },
+  { name: 'webpack', img: 'https://github.com/get-icon/geticon/raw/master/icons/webpack.svg', url: 'https://webpack.js.org/' },
+  { name: 'AWS', img: 'https://github.com/get-icon/geticon/raw/master/icons/aws.svg', url: 'https://aws.amazon.com/' },
+  { name: 'Azure', img: 'https://github.com/get-icon/geticon/raw/master/icons/azure-icon.svg', url: 'https://azure.microsoft.com/' },
+];
+
 
 
   function Skills() {

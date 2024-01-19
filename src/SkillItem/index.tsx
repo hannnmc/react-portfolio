@@ -56,12 +56,15 @@ interface SkillItemProps {
       animate={controls}
       variants={itemVariants}
       custom={delayRef}
-      className="flex justify-center items-center"
+      className="flex justify-center items-center cursor-pointer"
       ref={ref}
       whileHover={{ scale: 1.1 }}
       onMouseEnter={() => controls.start("hover")} 
       onMouseLeave={() => controls.start("default")}
-      onClick={() => controls.start("default")}
+      onClick={() => {
+        controls.start("default");
+        window.open(skill.url, '_blank')
+      }}
     >
       <img
         src={skill.img}
