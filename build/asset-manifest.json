@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.680b6d64.css",
-    "main.js": "/static/js/main.bc48086f.js",
+    "main.css": "/static/css/main.ebede6fd.css",
+    "main.js": "/static/js/main.1ecc3511.js",
     "static/media/budgit.png": "/static/media/budgit.1b92e8cc841a94407389.png",
     "static/media/cozybnb_home.png": "/static/media/cozybnb_home.284e45707feef3cfb541.png",
     "static/media/profile_photo.jpg": "/static/media/profile_photo.83e5adc50c5b50aeb3d6.jpg",
     "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
     "static/media/aviquest.png": "/static/media/aviquest.2b2eacc78f54aaa047eb.png",
     "static/media/portfolio.png": "/static/media/portfolio.244c6710176cf880d975.png",
-    "static/media/Han_Chen_Resume.pdf": "/static/media/Han_Chen_Resume.bc83de4f2101ce2c5cb2.pdf",
+    "static/media/Han_Chen_Resume.pdf": "/static/media/Han_Chen_Resume.8212bb47a6cd5dca8b73.pdf",
     "index.html": "/index.html",
-    "main.680b6d64.css.map": "/static/css/main.680b6d64.css.map",
-    "main.bc48086f.js.map": "/static/js/main.bc48086f.js.map"
+    "main.ebede6fd.css.map": "/static/css/main.ebede6fd.css.map",
+    "main.1ecc3511.js.map": "/static/js/main.1ecc3511.js.map"
   },
   "entrypoints": [
-    "static/css/main.680b6d64.css",
-    "static/js/main.bc48086f.js"
+    "static/css/main.ebede6fd.css",
+    "static/js/main.1ecc3511.js"
   ]
 }
