@@ -43,7 +43,7 @@ const Experiences = () => {
     const experiences = [
         {
             time: "Feb. 2023 - Present",
-            title: "Software Developer",
+            title: "Fullstack Developer",
             company: "Stellar Services",
             flow: true
         },

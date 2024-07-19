@@ -3,11 +3,11 @@ import React from "react";
 const Intro = () => {
 
     const introduction1 = 
-    "I'm a Full stack Software Engineer and I love creating stunning and useful web-applications."
+    "I'm a Full Stack Software Engineer based in NYC with a passion for leveraging technology to solve complex problems. I thrive on building beautiful and functional tools that make a real impact. Whether it's developing intuitive user interfaces or crafting robust back-end systems, I am dedicated to creating seamless and engaging experiences."
 
 
     const introduction2 = 
-    "When I'm not coding, I enjoy exploring national parks, cycling, playing sports, and catching up on movies."
+    "When I'm not coding, I enjoy rock climbing, hiking, cycling, and catching up on movies."
     
 
     return ( 
