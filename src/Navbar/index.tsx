@@ -14,7 +14,7 @@ const Navbar = ( ) => {
   };
 
   return (
-    <div className="flex items-center flex-row-reverse gap-16 font-Mont pr-24 h-20 text-inherit font-medium sm:pr-5 sm:gap-3 sm:text-sm sticky top-0 bg-black z-30">
+    <div className="navbar flex items-center flex-row-reverse gap-16 font-Mont pr-24 h-20 text-inherit font-medium sm:pr-5 sm:gap-3 sm:text-sm sticky top-0  z-30 bg-black">
       <motion.a
         onClick={(e) => {
             e.preventDefault();
