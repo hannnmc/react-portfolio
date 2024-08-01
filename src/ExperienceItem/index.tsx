@@ -105,7 +105,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
             className="timeline-dots rounded-full absolute bg-white -mt-20"
             style={{
                 opacity: dotOpacityScale,
-                x: window.innerWidth/2
+                x: 0
             }}
             ></motion.div>
         )}

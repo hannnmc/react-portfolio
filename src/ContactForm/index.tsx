@@ -41,7 +41,7 @@ const ContactForm = () => (
         id="message"
         name="message"
         required
-        className="form-textarea w-full border border-gray-400 rounded px-2 py-1 focus:outline-none focus:border-blue-500 leading-5"
+        className="form-textarea w-full border border-gray-400 rounded px-2 py-2 focus:outline-none focus:border-blue-500 leading-5"
       ></textarea>
       {/* other form fields go here */}
       <button

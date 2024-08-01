@@ -6,9 +6,9 @@
     background-color: #222;
 }
 .timeline-dots {
-    margin-left: -5px;
     width: 9px;
     height: 9px;
+    left: calc(50% - 4.5px);
 }
 
 [data-darkmode=false] .timeline-dots {
