@@ -42,23 +42,29 @@ const Experiences = () => {
 
     const experiences = [
         {
-            time: "Feb. 2023 - Present",
-            title: "Fullstack Developer",
-            company: "Stellar Services",
+            time: "Aug. 2024 - Present",
+            title: "Technical Lead",
+            company: "AECOM Tishman",
             flow: true
+        },
+        {
+            time: "Feb. 2023 - Aug. 2024",
+            title: "Fullstack Developer",
+            company: "Port Authority NYNJ",
+            flow: false
         },
         {
             time: "Aug. 2021 - Aug. 2022",
             title: "Data Instructor",
             company: "DBC Edu and Tech Co.",
-            flow: false
+            flow: true
 
         },
         {
             time: "Feb. 2019 - March. 2021",
             title: "Account Executive",
             company: "T-Mobile US",
-            flow: true
+            flow: false
         }
     ]
     return ( 
@@ -83,7 +89,7 @@ const Experiences = () => {
             opacity: opacityScale
         }}
         >
-            <div className="experience-timeline w-0.5 h-96 absolute rounded-full"></div>
+            <div className="experience-timeline w-0.5 absolute rounded-full"></div>
 
             {/* <motion.div
             className="-mt-60 rounded-full h-2 w-2 absolute bg-white"
