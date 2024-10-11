@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c84dd67.css",
-    "main.js": "/static/js/main.44b3e37e.js",
+    "main.css": "/static/css/main.67c18579.css",
+    "main.js": "/static/js/main.cae50e08.js",
     "static/media/budgit.png": "/static/media/budgit.1b92e8cc841a94407389.png",
     "static/media/cozybnb_home.png": "/static/media/cozybnb_home.284e45707feef3cfb541.png",
     "static/media/profile_photo.jpg": "/static/media/profile_photo.83e5adc50c5b50aeb3d6.jpg",
@@ -10,11 +10,11 @@
     "static/media/portfolio.png": "/static/media/portfolio.244c6710176cf880d975.png",
     "static/media/Han_Chen_Resume.pdf": "/static/media/Han_Chen_Resume.85d030448c09442f0df9.pdf",
     "index.html": "/index.html",
-    "main.9c84dd67.css.map": "/static/css/main.9c84dd67.css.map",
-    "main.44b3e37e.js.map": "/static/js/main.44b3e37e.js.map"
+    "main.67c18579.css.map": "/static/css/main.67c18579.css.map",
+    "main.cae50e08.js.map": "/static/js/main.cae50e08.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c84dd67.css",
-    "static/js/main.44b3e37e.js"
+    "static/css/main.67c18579.css",
+    "static/js/main.cae50e08.js"
   ]
 }
