@@ -49,7 +49,7 @@ const Projects = ({mobileView} : {mobileView: boolean}) => {
             title: "Cozybnb",
             img: project1photo,
             desc: "Cozybnb is a Full stack Airbnb replica with core interactive features for browsing properties, making reservations, and writing reviews. It's built utilizing React/Redux front-end (JavaScript) and Ruby on Rails back-end while incorporating Authentication, Google Maps, Places, Geocoding APIs, and AWS S3 for a seamless user experience. Leveraging Media Queries and Flexbox CSS, Cozybnb is fully web-responsive and mobile friendly.",
-            live: "https://cozy-bnb.herokuapp.com/",
+            live: "https://cozy-bnb-144778128690.herokuapp.com/",
             github: "https://github.com/hannnmc/Cozybnb"
         },
         {
