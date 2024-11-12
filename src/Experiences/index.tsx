@@ -43,7 +43,7 @@ const Experiences = () => {
     const experiences = [
         {
             time: "Aug. 2024 - Present",
-            title: "Technical Lead",
+            title: "Senior Software Engineer",
             company: "AECOM Tishman",
             flow: true
         },
