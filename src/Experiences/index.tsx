@@ -8,7 +8,6 @@ const Experiences = () => {
 
     const ref = useRef<HTMLDivElement | null>(null);
     const scrollRef = useRef<HTMLElement | null>(null);
-    const [reRender, setReRender] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [mobileView, setMobileView ] = useState((windowWidth < 541));
 
@@ -25,7 +24,6 @@ const Experiences = () => {
         };
 
         handleResize();
-        setTimeout(() => setReRender((prev) => !prev), 10);
 
         window.addEventListener("resize", handleResize);
 
