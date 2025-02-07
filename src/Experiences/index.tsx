@@ -33,13 +33,11 @@ const Experiences = () => {
     }, []);
 
 
-    const { scrollYProgress } = useScroll({
-        container: scrollRef,
-        target: ref,
-        offset: mobileView ? 
-        ["-1 1", "1.25 1"] : 
-        ["0 1", "1.85 1"]
-    })
+    const { scrollYProgress } = useScroll(
+        mobileView
+            ? { container: scrollRef, target: ref, offset: ["-1 1", "1.25 1"] } 
+            : { target: ref, offset: ["0 1", "1.85 1"] } 
+    );
 
     const opacityScale = useTransform(
         scrollYProgress, [0.25, 0.68, 1], [0.1, 0.4, 1]

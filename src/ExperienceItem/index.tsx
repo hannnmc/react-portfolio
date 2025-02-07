@@ -20,16 +20,19 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, fl
 
     const ref = useRef<HTMLDivElement>(null);
 
-    const {scrollYProgress } = useScroll({
-        container: scrollRef,
-        target: ref,
-        offset: mobileView ? 
-        ["0 1", "1.8 1"] : 
-        window.innerHeight < 1200 ? 
-        ["0 1", "4 1"]
-        :
-        ["2 1", "6 1"]
-    });
+    const { scrollYProgress } = useScroll(
+        mobileView
+            ? {
+                container: scrollRef, 
+                target: ref, 
+                offset: ["0 1", "1.8 1"]
+            }
+            : {
+                target: ref,
+                offset: window.innerHeight < 1200 ? ["0 1", "4 1"] : ["2 1", "6 1"]
+            }
+    );
+    
 
     const xScales = mobileView ?
     [

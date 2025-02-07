@@ -3,10 +3,13 @@
     src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
-html, body {
-    height: 100%;
-    overflow-y:auto;
+@media (max-width: 540px) {
+    html, body {
+        height: 100%;
+        overflow-y: auto;
+    }
 }
+
 
 #tsparticles {
     position: fixed;
