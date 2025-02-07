@@ -10,6 +10,7 @@ const Experiences = () => {
     const scrollRef = useRef<HTMLElement | null>(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [mobileView, setMobileView ] = useState((windowWidth < 541));
+    const [scrollConfig, setScrollConfig] = useState({});
 
     const handleResize = () => {
         const newWindowWidth = window.innerWidth;
@@ -18,10 +19,8 @@ const Experiences = () => {
     };
 
     useEffect(() => {
-        if (mobileView) {
-          scrollRef.current = document.body;
-        }
-      }, [mobileView]);
+        scrollRef.current = document.body; 
+      }, []);
 
     // handle screen size changing 
     useEffect(() => {
@@ -34,12 +33,20 @@ const Experiences = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (mobileView) {
+            setScrollConfig({ container: scrollRef, target: ref, offset: ["-1 1", "1.25 1"] });
+        } else {
+            setScrollConfig({ target: ref, offset: ["0 1", "1.85 1"] });
+        }
+    }, [mobileView]);
 
-    const { scrollYProgress } = useScroll(
-        mobileView
-            ? { container: scrollRef, target: ref, offset: ["-1 1", "1.25 1"] } 
-            : { target: ref, offset: ["0 1", "1.85 1"] } 
-    );
+    const { scrollYProgress } = useScroll(scrollConfig);
+    // const { scrollYProgress } = useScroll(
+    //     mobileView
+    //         ? { container: scrollRef, target: ref, offset: ["-1 1", "1.25 1"] } 
+    //         : { target: ref, offset: ["0 1", "1.85 1"] } 
+    // );
 
     const opacityScale = useTransform(
         scrollYProgress, [0.25, 0.68, 1], [0.1, 0.4, 1]
