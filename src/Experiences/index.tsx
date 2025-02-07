@@ -11,18 +11,20 @@ const Experiences = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [mobileView, setMobileView ] = useState((windowWidth < 541));
 
+    const handleResize = () => {
+        const newWindowWidth = window.innerWidth;
+        setWindowWidth(newWindowWidth);
+        setMobileView(newWindowWidth < 541);
+    };
+
     useEffect(() => {
-        scrollRef.current = document.body; 
-      }, []);
+        if (mobileView) {
+          scrollRef.current = document.body;
+        }
+      }, [mobileView]);
 
     // handle screen size changing 
     useEffect(() => {
-        const handleResize = () => {
-            const newWindowWidth = window.innerWidth;
-            setWindowWidth(newWindowWidth);
-            setMobileView(newWindowWidth < 541);
-        };
-
         handleResize();
 
         window.addEventListener("resize", handleResize);
