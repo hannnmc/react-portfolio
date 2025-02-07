@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e0df9de.css",
-    "main.js": "/static/js/main.23b5bef2.js",
+    "main.css": "/static/css/main.bfbd4999.css",
+    "main.js": "/static/js/main.b5b0f345.js",
     "static/media/budgit.png": "/static/media/budgit.1b92e8cc841a94407389.png",
     "static/media/cozybnb_home.png": "/static/media/cozybnb_home.284e45707feef3cfb541.png",
     "static/media/profile_photo.jpg": "/static/media/profile_photo.83e5adc50c5b50aeb3d6.jpg",
@@ -10,11 +10,11 @@
     "static/media/portfolio.png": "/static/media/portfolio.244c6710176cf880d975.png",
     "static/media/Han_Chen_Resume.pdf": "/static/media/Han_Chen_Resume.58a8b5b01b9a7208c77f.pdf",
     "index.html": "/index.html",
-    "main.4e0df9de.css.map": "/static/css/main.4e0df9de.css.map",
-    "main.23b5bef2.js.map": "/static/js/main.23b5bef2.js.map"
+    "main.bfbd4999.css.map": "/static/css/main.bfbd4999.css.map",
+    "main.b5b0f345.js.map": "/static/js/main.b5b0f345.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e0df9de.css",
-    "static/js/main.23b5bef2.js"
+    "static/css/main.bfbd4999.css",
+    "static/js/main.b5b0f345.js"
   ]
 }
