@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { RefObject, useEffect, useRef } from "react";
 import { motion, useTransform } from "framer-motion";
 import { useScroll } from "framer-motion";
 
@@ -13,13 +13,15 @@ type ExperienceItemProps = {
     setMobileView:React.Dispatch<React.SetStateAction<boolean>>;
     windowWidth:number;
     setWindowWidth:React.Dispatch<React.SetStateAction<number>>;
+    scrollRef:RefObject<HTMLElement>;
 }
 
-const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, flow, mobileView, setMobileView, windowWidth, setWindowWidth}) => {
+const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, flow, mobileView, setMobileView, windowWidth, setWindowWidth, scrollRef}) => {
 
     const ref = useRef<HTMLDivElement>(null);
 
     const {scrollYProgress } = useScroll({
+        container: scrollRef,
         target: ref,
         offset: mobileView ? 
         ["0 1", "1.8 1"] : 

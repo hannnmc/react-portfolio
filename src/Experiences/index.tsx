@@ -6,9 +6,14 @@ import { useRef } from "react";
 
 const Experiences = () => {
 
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
+    const scrollRef = useRef<HTMLElement | null>(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [mobileView, setMobileView ] = useState((windowWidth < 541));
+
+    useEffect(() => {
+        scrollRef.current = document.body; // ✅ Manually assign `document.body` to the ref after mount
+      }, []);
 
     // handle screen size changing 
     useEffect(() => {
@@ -29,6 +34,7 @@ const Experiences = () => {
 
 
     const { scrollYProgress } = useScroll({
+        container: scrollRef,
         target: ref,
         offset: mobileView ? 
         ["-1 1", "1.25 1"] : 
@@ -80,6 +86,7 @@ const Experiences = () => {
                 setMobileView={setMobileView}
                 windowWidth={windowWidth}
                 setWindowWidth={setWindowWidth}
+                scrollRef={scrollRef}
                 />
             )}
             

@@ -3,6 +3,11 @@
     src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
+html, body {
+    height: 100%;
+    overflow-y:auto;
+}
+
 #tsparticles {
     position: fixed;
     height: 100%;
