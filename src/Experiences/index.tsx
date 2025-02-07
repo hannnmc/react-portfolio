@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import "./Experiences.css"; 
 import ExperienceItem from "../ExperienceItem";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -12,24 +12,20 @@ const Experiences = () => {
     const [mobileView, setMobileView ] = useState((windowWidth < 541));
 
     useEffect(() => {
-        scrollRef.current = document.body; // ✅ Manually assign `document.body` to the ref after mount
+        scrollRef.current = document.body; 
       }, []);
 
     // handle screen size changing 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const handleResize = () => {
-            const newWindowWidth = window.innerWidth;
-            setWindowWidth(newWindowWidth);
-            setMobileView(newWindowWidth < 541);
+            setWindowWidth(window.innerWidth);
+            setMobileView(window.innerWidth < 541);
         };
-
+    
         handleResize();
-
+    
         window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
 
