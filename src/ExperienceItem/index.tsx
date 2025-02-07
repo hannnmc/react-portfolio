@@ -1,6 +1,6 @@
 "use client";
 
-import React, { RefObject, useEffect, useRef } from "react";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 import { motion, useTransform } from "framer-motion";
 import { useScroll } from "framer-motion";
 
@@ -19,19 +19,37 @@ type ExperienceItemProps = {
 const ExperienceItem: React.FC<ExperienceItemProps> = ({time, title, company, flow, mobileView, setMobileView, windowWidth, setWindowWidth, scrollRef}) => {
 
     const ref = useRef<HTMLDivElement>(null);
+    const [scrollConfig, setScrollConfig] = useState({});
 
-    const { scrollYProgress } = useScroll(
-        mobileView
-            ? {
+    useEffect(() => {
+        if (mobileView) {
+            setScrollConfig({
                 container: scrollRef, 
                 target: ref, 
                 offset: ["0 1", "1.8 1"]
-            }
-            : {
+            });
+        } else {
+            setScrollConfig({
                 target: ref,
                 offset: window.innerHeight < 1200 ? ["0 1", "4 1"] : ["2 1", "6 1"]
-            }
-    );
+            });
+        }
+    }, [mobileView]);
+
+    const { scrollYProgress } = useScroll(scrollConfig);
+
+    // const { scrollYProgress } = useScroll(
+    //     mobileView
+    //         ? {
+    //             container: scrollRef, 
+    //             target: ref, 
+    //             offset: ["0 1", "1.8 1"]
+    //         }
+    //         : {
+    //             target: ref,
+    //             offset: window.innerHeight < 1200 ? ["0 1", "4 1"] : ["2 1", "6 1"]
+    //         }
+    // );
     
 
     const xScales = mobileView ?
