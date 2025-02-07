@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Experiences.css"; 
 import ExperienceItem from "../ExperienceItem";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -16,17 +16,25 @@ const Experiences = () => {
       }, []);
 
     // handle screen size changing 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-            setMobileView(window.innerWidth < 541);
+            const newWindowWidth = window.innerWidth;
+            setWindowWidth(newWindowWidth);
+            setMobileView(newWindowWidth < 541);
         };
-    
+
         handleResize();
-    
+
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
     }, []);
+
+    useEffect(() => {
+        window.dispatchEvent(new Event("resize")); 
+    }, [mobileView]);
 
 
     const { scrollYProgress } = useScroll(
