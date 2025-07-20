@@ -55,8 +55,14 @@ const Experiences = () => {
 
     const experiences = [
         {
-            time: "Aug. 2024 - Present",
-            title: "Senior Software Engineer",
+            time: "Jun. 2025 - Present",
+            title: "Operations Engineer",
+            company: "Arch",
+            flow: false
+        },
+        {
+            time: "Aug. 2024 - Jan. 2024",
+            title: "Sr. Software Engineer",
             company: "AECOM Tishman",
             flow: true
         },
@@ -97,7 +103,7 @@ const Experiences = () => {
                 />
             )}
             
-        <motion.div className="flex items-center justify-center h-96 relative -mt-96 mb-24 sm:-mt-80 sm:h-80"
+        <motion.div className="flex items-center justify-center h-[510px] relative -mt-[510px] mb-24 sm:-mt-80 sm:h-80"
         ref={ref}
         style={{
             opacity: opacityScale
