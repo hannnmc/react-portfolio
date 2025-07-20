@@ -3,11 +3,11 @@ import React from "react";
 const Intro = () => {
 
     const introduction1 = 
-    "I'm a Full Stack Software Engineer based in NYC with a passion for leveraging technology to solve complex problems. I thrive on building beautiful and functional tools that make a real impact. Whether it's developing intuitive user interfaces or crafting robust back-end systems, I am dedicated to creating seamless and engaging experiences."
+    "I'm a Full Stack Software Engineer based in NYC with a passion for using technology to solve real world problems. I thrive on building beautiful and functional tools that make a real impact."
 
 
-    const introduction2 = 
-    "When I'm not coding, I enjoy rock climbing, hiking, cycling, and catching up on movies."
+    // const introduction2 = 
+    // "When I'm not coding, I enjoy taking my Siamese cat for a walk around the neighborhood. I also enjoy rock climbing, hiking, good tv shows and movies."
     
 
     return ( 
@@ -15,7 +15,7 @@ const Intro = () => {
             {introduction1}
             <br/>
             <br/>
-            {introduction2}
+            {/* {introduction2} */}
         </div>
      );
 }
